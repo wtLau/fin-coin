@@ -1,36 +1,37 @@
 import React from 'react';
 // import { connect } from 'react-redux';
-// import RaisedButton from 'material-ui/RaisedButton';
-// import { Link } from 'react-router-dom';
-// import boomtownLogo from '../../images/boomtown-logo.svg';
+import RaisedButton from 'material-ui/RaisedButton';
+import { Link } from 'react-router-dom';
+import coinsLogo from '../../assets/coinsLogo.png';
 // import FilterList from '../FilterList';
 // import { itemListFilter } from '../../redux/modules/items';
 
 import './style.css';
 
+const style = {
+    margin: 12
+};
+
 const Header = ({ dispatch, itemFilter }) => (
     <div className="header">
-        <div>
-            <h1>Header</h1>
-        </div>
-        {/* <div className="logo_menu">
+        <div className="logo_menu">
             <Link to="/">
-                <img className="logo" alt="logo" src={boomtownLogo} />
+                <img className="logo" alt="logo" src={coinsLogo} />
             </Link>
-            <FilterList
+            {/* <FilterList
                 dispatch={dispatch}
                 handleChange={itemListFilter}
                 itemFilter={itemFilter}
-            />
+            /> */}
         </div>
         <div className="buttons">
-            <Link to="/profile/QpVjRYM0nNU9Tvm8OWtI5ATGiFf1">
-                <RaisedButton label="My Profile" primary="true" style={style} />
+            <Link to="/">
+                <RaisedButton label="Coins" primary="true" style={style} />
             </Link>
-            <Link to="/daf">
-                <RaisedButton label="Log Out" style={style} />
+            <Link to="/news">
+                <RaisedButton label="News" style={style} />
             </Link>
-        </div> */}
+        </div>
     </div>
 );
 

@@ -1,0 +1,40 @@
+.appContentWrapper {
+    display: flex;
+    min-height: 100%;
+    flex-direction:column;
+}
+
+.appContent {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1140px;
+  width: 100%;
+  flex:1;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  height: 36px;
+  width: auto;
+  margin: 0 30px;
+  background: #91D3F6;
+}
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.logo_menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
