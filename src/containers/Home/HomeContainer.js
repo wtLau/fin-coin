@@ -1,6 +1,6 @@
 import React from 'react';
 
-const App = () => {
+const HomeContainer = () => {
     return (
         <div className="App">
             <header className="App-header">
@@ -12,4 +12,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default HomeContainer;
