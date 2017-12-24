@@ -6,7 +6,7 @@ import React from 'react';
 // import FilterList from '../FilterList';
 // import { itemListFilter } from '../../redux/modules/items';
 
-import './styles.css';
+import './style.css';
 
 const Header = ({ dispatch, itemFilter }) => (
     <div className="header">
