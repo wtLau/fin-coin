@@ -1,44 +1,28 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import RaisedButton from 'material-ui/RaisedButton';
-import { Link } from 'react-router-dom';
-import boomtownLogo from '../../images/boomtown-logo.svg';
-import FilterList from '../FilterList';
-import { itemListFilter } from '../../redux/modules/items';
+import PropTypes from 'prop-types';
+import Header from './Header';
+import Footer from './Footer';
 
 import './styles.css';
 
-const style = {
-    margin: 12
-};
-
-const Header = ({ dispatch, itemFilter }) => (
-    <div className="header">
-        <div className="logo_menu">
-            <Link to="/">
-                <img className="logo" alt="logo" src={boomtownLogo} />
-            </Link>
-            <FilterList
-                dispatch={dispatch}
-                handleChange={itemListFilter}
-                itemFilter={itemFilter}
-            />
+const Layout = ({ children }) => (
+    <div className="appContentWrapper">
+        <div className="appHeader">
+            <Header />
         </div>
-        <div className="buttons">
-            <Link to="/profile/QpVjRYM0nNU9Tvm8OWtI5ATGiFf1">
-                <RaisedButton label="My Profile" primary="true" style={style} />
-            </Link>
-            <Link to="/daf">
-                <RaisedButton label="Log Out" style={style} />
-            </Link>
+        <div className="appContent">
+            {children}
         </div>
+        <Footer />
     </div>
 );
 
-function mapStateToProps(state) {
-    return {
-        itemFilter: state.items.itemFilter
-    };
-}
+Layout.defaultProps = {
+    children: null
+};
 
-export default connect(mapStateToProps)(Header);
+Layout.propTypes = {
+    children: PropTypes.node
+};
+
+export default Layout;
